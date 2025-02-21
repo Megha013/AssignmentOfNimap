@@ -1,0 +1,12 @@
+﻿@model Product
+
+<h2>Product Details</h2>
+
+<p><strong>Product ID:</strong> @Model.ProductId</p>
+<p><strong>Product Name:</strong> @Model.ProductName</p>
+<p><strong>Category ID:</strong> @Model.CategoryId</p>
+<p><strong>Category Name:</strong> @Model.CategoryName</p>
+
+
+<a href="@Url.Action("Edit", new { id = Model.ProductId })" class="btn btn-primary">Edit</a>
+<a href="@Url.Action("Index")" class="btn btn-secondary">Back to List</a>

@@ -1,0 +1,9 @@
+﻿@model Category
+
+<h2>Category Details</h2>
+
+<p><strong>Category ID:</strong> @Model.CategoryId</p>
+<p><strong>Category Name:</strong> @Model.CategoryName</p>
+
+<a href="@Url.Action("Edit", new { id = Model.CategoryId })" class="btn btn-primary">Edit</a>
+<a href="@Url.Action("Index")" class="btn btn-secondary">Back to List</a>

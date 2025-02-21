@@ -1,0 +1,59 @@
+﻿ @model IEnumerable<Category>
+
+<h2>Category List</h2>
+<a href="@Url.Action("Create")" class="btn btn-primary">Add Category</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Category ID</th>
+            <th>Category Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var category in Model)
+        {
+            <tr>
+                <td>@category.CategoryId</td>
+                <td>@category.CategoryName</td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = category.CategoryId })">Edit</a> |
+                    <a href="@Url.Action("Delete", new { id = category.CategoryId })">Delete</a> |
+                    <a href="@Url.Action("Details", new { id = category.CategoryId })">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@* <h2>Category List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Category ID</th>
+            <th>Category Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CategoryId</td>
+                <td>@item.CategoryName</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.CategoryId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.CategoryId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.CategoryId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    @Html.ActionLink("Create New Category", "Create")
+</p>
+ *@
